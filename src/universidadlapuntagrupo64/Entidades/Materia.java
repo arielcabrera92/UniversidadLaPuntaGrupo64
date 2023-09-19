@@ -12,30 +12,30 @@ package universidadlapuntagrupo64.Entidades;
 public class Materia {
     private int idMateria;
     private String nombre;
-    private int anioMateria;
-    private boolean activo;
+    private int anio;
+    private boolean estado;
 
     public Materia() {
     }
 
-    public Materia(int idMateria, String nombre, int anioMateria, boolean activo) {
+    public Materia(int idMateria, String nombre, int anio, boolean estado) {
         this.idMateria = idMateria;
         this.nombre = nombre;
-        this.anioMateria = anioMateria;
-        this.activo = activo;
+        this.anio = anio;
+        this.estado = estado;
     }
 
-    public Materia(String nombre, int anioMateria, boolean activo) {
+    public Materia(String nombre, int anio, boolean estado) {
         this.nombre = nombre;
-        this.anioMateria = anioMateria;
-        this.activo = activo;
+        this.anio = anio;
+        this.estado = estado;
     }
 
-    public int getIdMateria() {
+    public int getidMateria() {
         return idMateria;
     }
 
-    public void setIdMateria(int idMateria) {
+    public void setidMateria(int idMateria) {
         this.idMateria = idMateria;
     }
 
@@ -47,25 +47,25 @@ public class Materia {
         this.nombre = nombre;
     }
 
-    public int getAnioMateria() {
-        return anioMateria;
+    public int getAnio() {
+        return anio;
     }
 
-    public void setAnioMateria(int anioMateria) {
-        this.anioMateria = anioMateria;
+    public void setAnio(int anio) {
+        this.anio = anio;
     }
 
-    public boolean isActivo() {
-        return activo;
+    public boolean isEstado() {
+        return estado;
     }
 
-    public void setActivo(boolean activo) {
-        this.activo = activo;
+    public void setEstado(boolean estado) {
+        this.estado = estado;
     }
 
     @Override
     public String toString() {
-        return "Materia{" + "idMateria=" + idMateria + ", nombre=" + nombre + ", anioMateria=" + anioMateria + '}';
+        return "Materia{" + "idMateria=" + idMateria + ", nombre=" + nombre + ", anio=" + anio + '}';
     }
     
 }
