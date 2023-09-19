@@ -33,10 +33,12 @@ public class UniversidadLaPuntaGrupo64 {
         //Alumno martin =new Alumno(25698789,"Gonzalez","Florencia",LocalDate.of(1978, 5, 19),true);
         //AlumnoData alu=new AlumnoData();
         //alu.guardarAlumno(martin);
-        Alumno martin =new Alumno(25698789,"Gonzalez","Florencia",LocalDate.of(1978, 5, 19),true);
+        //Alumno martin =new Alumno(25698789,"Gonzalez","Florencia",LocalDate.of(1978, 5, 19),true);
+        //AlumnoData alu=new AlumnoData();
+        //alu.guardarAlumno(martin);
+        Alumno ricardo =new Alumno(28569753,"Arjona","Ricardo",LocalDate.of(1969, 12, 5),true);
         AlumnoData alu=new AlumnoData();
-        alu.guardarAlumno(martin);
-        
+        alu.guardarAlumno(ricardo);
     }
     
 }
