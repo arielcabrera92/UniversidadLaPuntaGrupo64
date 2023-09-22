@@ -31,11 +31,11 @@ public class Materia {
         this.estado = estado;
     }
 
-    public int getidMateria() {
+    public int getIdMateria() {
         return idMateria;
     }
 
-    public void setidMateria(int idMateria) {
+    public void setIdMateria(int idMateria) {
         this.idMateria = idMateria;
     }
 
@@ -63,6 +63,7 @@ public class Materia {
         this.estado = estado;
     }
 
+    
     @Override
     public String toString() {
         return "Materia{" + "idMateria=" + idMateria + ", nombre=" + nombre + ", anio=" + anio + '}';
