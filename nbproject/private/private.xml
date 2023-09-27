@@ -3,12 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Asus/OneDrive/Escritorio/proyectojava/UniversidadLaPuntaGrupo64/src/universidadlapuntagrupo64/AccesoADatos/InscripcionData.java</file>
-            <file>file:/C:/Users/Asus/OneDrive/Escritorio/proyectojava/UniversidadLaPuntaGrupo64/src/universidadlapuntagrupo64/Formularios/MenuULP.java</file>
-            <file>file:/C:/Users/Asus/OneDrive/Escritorio/proyectojava/UniversidadLaPuntaGrupo64/src/universidadlapuntagrupo64/Entidades/Materia.java</file>
-            <file>file:/C:/Users/Asus/OneDrive/Escritorio/proyectojava/UniversidadLaPuntaGrupo64/src/universidadlapuntagrupo64/Formularios/GestionDeAlumnos.java</file>
-            <file>file:/C:/Users/Asus/OneDrive/Escritorio/proyectojava/UniversidadLaPuntaGrupo64/src/universidadlapuntagrupo64/Formularios/GestionDeMaterias.java</file>
-            <file>file:/C:/Users/Asus/OneDrive/Escritorio/proyectojava/UniversidadLaPuntaGrupo64/src/universidadlapuntagrupo64/AccesoADatos/MateriaData.java</file>
+            <file>file:/E:/UniversidadLaPuntaGrupo64/src/universidadlapuntagrupo64/Formularios/NuevaConsultaAlumnosPorMateria.java</file>
+            <file>file:/E:/UniversidadLaPuntaGrupo64/src/universidadlapuntagrupo64/Formularios/ConsultaAlumnosPorMateria.java</file>
+            <file>file:/E:/UniversidadLaPuntaGrupo64/src/universidadlapuntagrupo64/Entidades/Materia.java</file>
         </group>
     </open-files>
 </project-private>
