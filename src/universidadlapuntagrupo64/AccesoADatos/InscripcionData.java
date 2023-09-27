@@ -36,7 +36,7 @@ public class InscripcionData {
         try {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setInt(1, insc.getAlumno().getIdAlumno());
-            ps.setInt(2, insc.getMateria().getIdMateria());
+            ps.setInt(2, insc.getMateria().getidMateria());
             ps.setDouble(3, insc.getNota());
             ps.executeUpdate();
             ResultSet rs = ps.getGeneratedKeys();
@@ -139,7 +139,7 @@ public class InscripcionData {
             ResultSet rs = ps.executeQuery();
             while (rs.next()){
                 Materia materia = new Materia();
-                materia.setIdMateria(rs.getInt("idMateria"));
+                materia.setidMateria(rs.getInt("idMateria"));
                 materia.setNombre(rs.getString("nombre"));
                 materia.setAnio(rs.getInt("anio"));
                 materias.add(materia); 
@@ -159,7 +159,7 @@ public class InscripcionData {
             ResultSet rs = ps.executeQuery();
             while (rs.next()){
                 Materia materia = new Materia();
-                materia.setIdMateria(rs.getInt("idMateria"));
+                materia.setidMateria(rs.getInt("idMateria"));
                 materia.setNombre(rs.getString("nombre"));
                 materia.setAnio(rs.getInt("anio"));
                 materias.add(materia); 

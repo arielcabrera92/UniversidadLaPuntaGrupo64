@@ -32,7 +32,7 @@ public class MateriaData {
             
             if (rs.next()) {
                 System.out.println("dentro del if");
-                materia.setIdMateria(rs.getInt(1));
+                materia.setidMateria(rs.getInt(1));
                 System.out.println(rs.getInt(1));
                 JOptionPane.showMessageDialog(null, "La materia fue añadido con exito.");
 
@@ -56,12 +56,12 @@ public class MateriaData {
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
                 materia = new Materia();
-                materia.setIdMateria(id);
+                materia.setidMateria(id);
                 materia.setNombre(rs.getString("nombre"));
                 materia.setAnio(rs.getInt("anio"));
                 materia.setEstado(true);
             } else {
-                JOptionPane.showMessageDialog(null, "No existe el alumno");
+                JOptionPane.showMessageDialog(null, "No existe la materia");
                 ps.close();
             }
         }catch (SQLException ex) {
@@ -77,7 +77,7 @@ public class MateriaData {
             ps.setString(1, materia.getNombre());
             ps.setInt(2, materia.getAnio());
             ps.setBoolean(3, materia.isEstado());
-            ps.setInt(5, materia.getIdMateria());
+            ps.setInt(5, materia.getidMateria());
             int exito = ps.executeUpdate();
             if (exito == 1) {
                 JOptionPane.showMessageDialog(null, "Materia modificada exitosamente.");
@@ -114,7 +114,7 @@ public class MateriaData {
             while (rs.next()) {
                 Materia materia = new Materia();
 
-                materia.setIdMateria(rs.getInt("idMateria")); //alumno.setIdAlumno(rs.getInt("idAlumno"));
+                materia.setidMateria(rs.getInt("idMateria")); //alumno.setIdAlumno(rs.getInt("idAlumno"));
                 materia.setNombre(rs.getString("nombre")); //alumno.setDni(rs.getInt("dni"));
                 materia.setAnio(rs.getInt("anio")); //alumno.setApellido(rs.getString("apellido"));
                 materia.setEstado(rs.getBoolean("estado")); //alumno.setEstado(rs.getBoolean("estado"));

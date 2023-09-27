@@ -31,11 +31,11 @@ public class Materia {
         this.estado = estado;
     }
 
-    public int getIdMateria() {
+    public int getidMateria() {
         return idMateria;
     }
 
-    public void setIdMateria(int idMateria) {
+    public void setidMateria(int idMateria) {
         this.idMateria = idMateria;
     }
 
