@@ -16,7 +16,7 @@ import universidadlapuntagrupo64.Entidades.*;
  *
  * @author ariel
  */
-public class NuevaConsultaAlumnosPorMateria extends javax.swing.JInternalFrame {
+public class ConsultaAlumnosPorMateria extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form NuevaConsultaAlumnosPorMateria
@@ -30,7 +30,7 @@ public class NuevaConsultaAlumnosPorMateria extends javax.swing.JInternalFrame {
     private DefaultTableModel modelo = new DefaultTableModel();
     
     
-    public NuevaConsultaAlumnosPorMateria() {
+    public ConsultaAlumnosPorMateria() {
         initComponents();
         mData = new MateriaData(); 
         listaM = (ArrayList<Materia>)mData.listarMaterias();
@@ -58,18 +58,22 @@ public class NuevaConsultaAlumnosPorMateria extends javax.swing.JInternalFrame {
         jtListaAlumnos = new javax.swing.JTable();
         jbSalir = new javax.swing.JButton();
 
-        jPanel1.setBackground(new java.awt.Color(0, 153, 102));
+        jPanel1.setBackground(new java.awt.Color(56, 133, 188));
 
+        jlTitulo.setFont(new java.awt.Font("Lucida Sans", 1, 18)); // NOI18N
         jlTitulo.setText("Consulta Alumnos por Materia");
 
+        jlSeleccionarMateria.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
         jlSeleccionarMateria.setText("Seleccionar Materia");
 
+        jcbListaMaterias.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
         jcbListaMaterias.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbListaMateriasActionPerformed(evt);
             }
         });
 
+        jtListaAlumnos.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
         jtListaAlumnos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -83,6 +87,9 @@ public class NuevaConsultaAlumnosPorMateria extends javax.swing.JInternalFrame {
         ));
         jScrollPane1.setViewportView(jtListaAlumnos);
 
+        jbSalir.setBackground(new java.awt.Color(23, 56, 79));
+        jbSalir.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
+        jbSalir.setForeground(new java.awt.Color(255, 255, 255));
         jbSalir.setText("Salir");
         jbSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,20 +104,22 @@ public class NuevaConsultaAlumnosPorMateria extends javax.swing.JInternalFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 470, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 470, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jlSeleccionarMateria)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jcbListaMaterias, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jlSeleccionarMateria)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jcbListaMaterias, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jbSalir)
+                        .addGap(30, 30, 30))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jbSalir)
-                .addGap(30, 30, 30))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(165, 165, 165)
                 .addComponent(jlTitulo)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(99, 99, 99))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -125,7 +134,7 @@ public class NuevaConsultaAlumnosPorMateria extends javax.swing.JInternalFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(jbSalir)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

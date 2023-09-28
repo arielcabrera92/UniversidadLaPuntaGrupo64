@@ -6,6 +6,10 @@
 
 package universidadlapuntagrupo64.Formularios;
 
+import java.awt.Graphics;
+import java.awt.Image;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Asus
@@ -15,6 +19,7 @@ public class MenuULP extends javax.swing.JFrame {
     /** Creates new form MenuULP */
     public MenuULP() {
         initComponents();
+        this.setLocationRelativeTo(null);
         this.setSize(600,500);
     }
 
@@ -29,7 +34,13 @@ public class MenuULP extends javax.swing.JFrame {
 
         jMenu5 = new javax.swing.JMenu();
         jMenu6 = new javax.swing.JMenu();
-        Escritorio = new javax.swing.JDesktopPane();
+        ImageIcon icono = new ImageIcon(getClass().getResource("/universidadlapuntagrupo64/recursos/fondo.jpg"));
+        Image fondo = icono.getImage();
+        escritorio = new javax.swing.JDesktopPane(){
+            public void paintComponent (Graphics g){
+                g.drawImage(fondo, 0, 0, getWidth(), getHeight(), this);
+            }
+        };
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -48,21 +59,23 @@ public class MenuULP extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Escritorio.setPreferredSize(new java.awt.Dimension(600, 500));
+        escritorio.setPreferredSize(new java.awt.Dimension(600, 500));
 
-        javax.swing.GroupLayout EscritorioLayout = new javax.swing.GroupLayout(Escritorio);
-        Escritorio.setLayout(EscritorioLayout);
-        EscritorioLayout.setHorizontalGroup(
-            EscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout escritorioLayout = new javax.swing.GroupLayout(escritorio);
+        escritorio.setLayout(escritorioLayout);
+        escritorioLayout.setHorizontalGroup(
+            escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 473, Short.MAX_VALUE)
         );
-        EscritorioLayout.setVerticalGroup(
-            EscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        escritorioLayout.setVerticalGroup(
+            escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 281, Short.MAX_VALUE)
         );
 
         jMenu1.setText("Alumno");
+        jMenu1.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
 
+        jMenuItem1.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
         jMenuItem1.setText("Formulario de Alumno");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,7 +87,9 @@ public class MenuULP extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Materia");
+        jMenu2.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
 
+        jMenuItem2.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
         jMenuItem2.setText("Formulario de Materia");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,23 +101,54 @@ public class MenuULP extends javax.swing.JFrame {
         jMenuBar1.add(jMenu2);
 
         jMenu3.setText("Administracion");
+        jMenu3.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
 
-        jMenuItem3.setText("Manejo de Inscripciones");
+        jMenuItem3.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
+        jMenuItem3.setText("Inscripciones");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem3);
 
-        jMenuItem4.setText("Manipulacion de Notas");
+        jMenuItem4.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
+        jMenuItem4.setText("Carga de notas");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem4);
 
         jMenuBar1.add(jMenu3);
 
         jMenu4.setText("Consulta");
+        jMenu4.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
+        jMenu4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu4ActionPerformed(evt);
+            }
+        });
 
+        jMenuItem5.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
         jMenuItem5.setText("Alumnos por Materia");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuItem5);
 
         jMenuBar1.add(jMenu4);
 
         jMenu7.setText("Salir");
+        jMenu7.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
+        jMenu7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu7ActionPerformed(evt);
+            }
+        });
         jMenuBar1.add(jMenu7);
 
         setJMenuBar(jMenuBar1);
@@ -111,11 +157,11 @@ public class MenuULP extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Escritorio, javax.swing.GroupLayout.DEFAULT_SIZE, 473, Short.MAX_VALUE)
+            .addComponent(escritorio, javax.swing.GroupLayout.DEFAULT_SIZE, 473, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Escritorio, javax.swing.GroupLayout.DEFAULT_SIZE, 281, Short.MAX_VALUE)
+            .addComponent(escritorio, javax.swing.GroupLayout.DEFAULT_SIZE, 281, Short.MAX_VALUE)
         );
 
         pack();
@@ -123,24 +169,64 @@ public class MenuULP extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
-        Escritorio.removeAll();
-        Escritorio.repaint();
+        escritorio.removeAll();
+        escritorio.repaint();
         GestionDeAlumnos gda=new GestionDeAlumnos();
         gda.setVisible(true);
-        Escritorio.add(gda);
-        Escritorio.moveToFront(gda);
+        escritorio.add(gda);
+        escritorio.moveToFront(gda);
         
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
-        Escritorio.removeAll();
-        Escritorio.repaint();
+        escritorio.removeAll();
+        escritorio.repaint();
         GestionDeMaterias gdm = new GestionDeMaterias();
         gdm.setVisible(true);
-        Escritorio.add(gdm);
-        Escritorio.moveToFront(gdm);
+        escritorio.add(gdm);
+        escritorio.moveToFront(gdm);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // TODO add your handling code here:
+        escritorio.removeAll();
+        escritorio.repaint();
+        FormularioInscripcion fi = new FormularioInscripcion();
+        fi.setVisible(true);
+        escritorio.add(fi);
+        escritorio.moveToFront(fi);    
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+        escritorio.removeAll();
+        escritorio.repaint();
+        ActualizacionDeNotas an = new ActualizacionDeNotas();
+        an.setVisible(true);
+        escritorio.add(an);
+        escritorio.moveToFront(an);   
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenu4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu4ActionPerformed
+        // TODO add your handling code here:
+ 
+    }//GEN-LAST:event_jMenu4ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        // TODO add your handling code here:
+        escritorio.removeAll();
+        escritorio.repaint();
+        ConsultaAlumnosPorMateria apm = new ConsultaAlumnosPorMateria();
+        apm.setVisible(true);
+        escritorio.add(apm);
+        escritorio.moveToFront(apm);  
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jMenu7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu7ActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_jMenu7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -178,7 +264,7 @@ public class MenuULP extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDesktopPane Escritorio;
+    private javax.swing.JDesktopPane escritorio;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
