@@ -124,7 +124,7 @@ public class AlumnoData {
     }
     
     public void modificarAlumno(Alumno alumno){
-        String sql = "UPDATE alumno SET dni= ?, apellido = ?, nombre = ?, fechaNacimiento=?" + "WHERE.idAlumno =?";
+        String sql = "UPDATE alumno SET dni= ?, apellido = ?, nombre = ?, fechaNacimiento=?" + "WHERE idAlumno =?";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, alumno.getDni());
@@ -134,7 +134,7 @@ public class AlumnoData {
             ps.setInt(5, alumno.getIdAlumno());
             int exito = ps.executeUpdate();
             if(exito==1){
-                JOptionPane.showMessageDialog(null, "Error al acceder a la tabla alumno");
+                JOptionPane.showMessageDialog(null, "Alumno actualizado exitosamente");
             }
         } catch (SQLException ex) {
            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla alumno");

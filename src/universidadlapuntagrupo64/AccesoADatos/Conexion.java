@@ -26,14 +26,14 @@ public class Conexion {
             try {
                 Class.forName("org.mariadb.jdbc.Driver");
                 connection = DriverManager.getConnection(URL + DB, USUARIO, PASSWORD);
-                JOptionPane.showMessageDialog(null, "Conectado");
+                //JOptionPane.showMessageDialog(null, "Conectado");
             } catch (ClassNotFoundException ex) {
-                JOptionPane.showMessageDialog(null, "Error al cargar los Driver");
+                JOptionPane.showMessageDialog(null, "Error al cargar los Drivers");
 
             } catch(SQLException ex)  {
-                JOptionPane.showMessageDialog(null, "Error al conectarse al DB");
+                JOptionPane.showMessageDialog(null, "Error al conectarse a la base de datos");
             }
-            }
-            return connection;
+        }
+        return connection;
     }
 }

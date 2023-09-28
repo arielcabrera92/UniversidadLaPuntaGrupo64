@@ -212,21 +212,19 @@ public class GestionDeMaterias extends javax.swing.JInternalFrame {
     private void jBbuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBbuscarActionPerformed
         // TODO add your handling code here:
         
-         try{
-        Integer codigo=Integer.parseInt(jTcodigo.getText());
-        matActual=matData.buscarMateria(codigo);
-        if(matActual!=null){
-        
-            jTnombre.setText(matActual.getNombre());
-            Integer año =Integer.parseInt(jTaño.getText());
-            jRestado.setSelected(matActual.isEstado());
-                
-        }
+        try{
+            Integer codigo = Integer.parseInt(jTcodigo.getText());
+            matActual = matData.buscarMateria(codigo);
+            if(matActual!= null){
+                jTnombre.setText(matActual.getNombre());
+                Integer año =Integer.parseInt(jTaño.getText());
+                //jTaño.setText(matActual.getAnio()+"");
+                jRestado.setSelected(matActual.isEstado());
+            }
         
         }catch(NumberFormatException ex){
         
-            JOptionPane.showMessageDialog(this, "Ingrese un codigo valido");
-            
+            JOptionPane.showMessageDialog(this, "Ingrese un codigo valido"); 
         }
     }//GEN-LAST:event_jBbuscarActionPerformed
 

@@ -113,8 +113,9 @@ public class FormularioInscripcion extends javax.swing.JInternalFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
+        jbinscribir.setBackground(new java.awt.Color(23, 56, 79));
         jbinscribir.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
-        jbinscribir.setForeground(new java.awt.Color(23, 56, 79));
+        jbinscribir.setForeground(new java.awt.Color(255, 255, 255));
         jbinscribir.setText("Inscribir");
         jbinscribir.setEnabled(false);
         jbinscribir.addActionListener(new java.awt.event.ActionListener() {
@@ -123,8 +124,9 @@ public class FormularioInscripcion extends javax.swing.JInternalFrame {
             }
         });
 
+        jbainscripcion.setBackground(new java.awt.Color(23, 56, 79));
         jbainscripcion.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
-        jbainscripcion.setForeground(new java.awt.Color(23, 56, 79));
+        jbainscripcion.setForeground(new java.awt.Color(255, 255, 255));
         jbainscripcion.setText("Anular Inscripcion");
         jbainscripcion.setEnabled(false);
         jbainscripcion.addActionListener(new java.awt.event.ActionListener() {
@@ -133,8 +135,9 @@ public class FormularioInscripcion extends javax.swing.JInternalFrame {
             }
         });
 
+        jButton3.setBackground(new java.awt.Color(23, 56, 79));
         jButton3.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(23, 56, 79));
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Salir");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
