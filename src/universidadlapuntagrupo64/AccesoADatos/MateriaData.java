@@ -34,7 +34,7 @@ public class MateriaData {
                 System.out.println("dentro del if");
                 materia.setidMateria(rs.getInt(1));
                 System.out.println(rs.getInt(1));
-                JOptionPane.showMessageDialog(null, "La materia fue añadido con exito.");
+                JOptionPane.showMessageDialog(null, "La materia fue añadida con exito.");
 
             }
             ps.close();
@@ -77,7 +77,8 @@ public class MateriaData {
             ps.setString(1, materia.getNombre());
             ps.setInt(2, materia.getAnio());
             ps.setBoolean(3, materia.isEstado());
-            ps.setInt(5, materia.getidMateria());
+            ps.setInt(4, materia.getidMateria());
+            ps.setInt(5, materia.getidMateria()); 
             int exito = ps.executeUpdate();
             if (exito == 1) {
                 JOptionPane.showMessageDialog(null, "Materia modificada exitosamente.");

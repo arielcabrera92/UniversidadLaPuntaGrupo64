@@ -139,6 +139,11 @@ public class FormularioInscripcion extends javax.swing.JInternalFrame {
         jButton3.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Salir");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -263,7 +268,7 @@ jbinscribir.setEnabled(false);
     }//GEN-LAST:event_jbinscribirActionPerformed
 
     private void jbainscripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbainscripcionActionPerformed
-    
+    /*
         int filaSeleccionada=jTable1.getSelectedRow();
         if (filaSeleccionada!=-1){
             
@@ -273,8 +278,22 @@ jbinscribir.setEnabled(false);
             inscData.borrarInscripcionMateriaAlumno(a.getIdAlumno(), idMateria);
             borrarFilaTabla();
         }
-        
+      */
+    int filaSeleccionada=jTable1.getSelectedRow();
+        if (filaSeleccionada!=-1){
+            
+            Alumno a=(Alumno)jComboBox1.getSelectedItem();
+            int idMateria=(Integer)modelo.getValueAt(filaSeleccionada,0);
+            
+            inscData.borrarInscripcionMateriaAlumno(a.getIdAlumno(), idMateria);
+            borrarFilaTabla();
+        }
     }//GEN-LAST:event_jbainscripcionActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

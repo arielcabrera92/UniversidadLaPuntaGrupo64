@@ -214,11 +214,11 @@ public class GestionDeMaterias extends javax.swing.JInternalFrame {
         
         try{
             Integer codigo = Integer.parseInt(jTcodigo.getText());
+            //Integer año =Integer.parseInt(jTaño.getText());
             matActual = matData.buscarMateria(codigo);
             if(matActual!= null){
                 jTnombre.setText(matActual.getNombre());
-                Integer año =Integer.parseInt(jTaño.getText());
-                //jTaño.setText(matActual.getAnio()+"");
+                jTaño.setText(matActual.getAnio()+"");
                 jRestado.setSelected(matActual.isEstado());
             }
         
